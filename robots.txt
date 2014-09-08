@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /crm/
+Disallow: /css/
+Disallow: /img/
+Disallow: /js/
+Disallow: /master/
+Disallow: /php/
+Disallow: /vendor/
+Disallow: /thank-you.html
+Disallow: /page-404.html
+
+
+
+Sitemap: http://www.solarsecure.tk/sitemap-tk.xml
+Sitemap: http://www.solarsecure.com.au/sitemap.xml

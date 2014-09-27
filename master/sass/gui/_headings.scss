@@ -158,3 +158,21 @@ h2 .inverted {
 	color: #333;
 	text-transform: none;
 }
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	h2 {
+		line-height: 40px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	h1.big {
+		font-size: 3.2em;
+		line-height: 42px;
+	}
+
+}

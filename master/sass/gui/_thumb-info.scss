@@ -154,3 +154,17 @@
 		}
 	}
 }
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	.thumb-info {
+		.thumb-info-title {
+			font-size: 14px;
+		}
+		.thumb-info-more {
+			font-size: 11px;
+		}
+	}	
+
+}

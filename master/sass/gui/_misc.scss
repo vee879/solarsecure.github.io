@@ -51,6 +51,27 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
+/* Pagination */
+.pagination {
+	> li > a,
+	> li > span,
+	> li > a:hover,
+	> li > span:hover,
+	> li > a:focus,
+	> li > span:focus {
+		color: #CCC;
+	}
+	> .active > a,
+	> .active > span,
+	> .active > a:hover,
+	> .active > span:hover,
+	> .active > a:focus,
+	> .active > span:focus {
+		background-color: #CCC;
+		border-color: #CCC;
+	}
+}
+
 /* Divider Line */
 hr {
 	@include background-image(linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent));
@@ -69,6 +90,9 @@ hr {
 	&.light {
 		@include background-image(linear-gradient(left, transparent, rgba(255, 255, 255, 0.2), transparent));
 	}
+	&.invisible {
+		background: none;
+	}
 }
 
 /* Read More */
@@ -84,6 +108,15 @@ hr {
 	position: relative;
 	visibility: hidden;
 	top: -100px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	.offset-anchor {
+		top: 0;
+	}
+
 }
 
 /* Show Grid */
@@ -109,5 +142,28 @@ hr {
 		text-align: center;
 		position: relative;
 		top: 2px;
+	}
+}
+
+/* Alert Admin */
+.alert-admin {
+	margin: 25px 0;
+	img {
+		margin: -50px 0 0;
+	}
+	.btn {
+		margin: 0 0 -15px;
+	}
+	p {
+		color: #444;
+	}
+	h4 {
+		color: #111;
+		font-size: 1.2em;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.warning {
+		color: #B20000;
 	}
 }

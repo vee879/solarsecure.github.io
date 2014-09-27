@@ -1,7 +1,10 @@
 /* Dark Version */
-body.dark {
+html.dark {
 
-	background-color: $dark-bg;
+	body {
+		background-color: $dark-bg;
+	}
+
 	&.boxed {
 		.body {
 			background-color: $dark-bg;
@@ -12,6 +15,7 @@ body.dark {
 	#header {
 		background: $dark-bg;
 		border-top-color: $darken-color-1;
+		border-radius: 6px 6px 0 0;
 
 		nav ul.nav-top li a:hover {
 			background-color: $dark-color-3;
@@ -38,6 +42,12 @@ body.dark {
 		nav.mega-menu ul.nav-main .mega-menu-signin a:hover,
 		nav.mega-menu ul.nav-main .mega-menu-signin.logged .user-avatar strong {
 			color: #FFF;
+		}
+
+		nav.mega-menu .mega-menu-signin ul.dropdown-menu {
+			&:hover li:hover li:hover a {
+				color: #d9d9d9;
+			}
 		}
 
 		.search input.search:focus {
@@ -67,7 +77,7 @@ body.dark {
 
 	}
 
-	&.sticky-menu-active #header {
+	body.sticky-menu-active #header {
 		border-bottom-color: $dark-color-3;
 	}
 
@@ -76,10 +86,8 @@ body.dark {
 		color: #FFF;
 	}
 
-	.modal-header {
-		h1, h2, h3, h4, h5, h6 {
-			color: $color-default;
-		}
+	.alert h1, .alert h2, .alert h3, .alert h4, .alert h5, .alert h6 {
+		color: #111;
 	}
 
 	// Blockquote
@@ -283,8 +291,8 @@ body.dark {
 			background: $dark-color-3;
 		}
 
-		.nav-tabs.nav-justify li a,
-		.nav-tabs.nav-justify li a:hover {
+		.nav-tabs.nav-justified li a,
+		.nav-tabs.nav-justified li a:hover {
 			border-bottom-color: $dark-color-3;
 		}
 
@@ -293,6 +301,11 @@ body.dark {
 			background: $dark-color-3;
 			border-left-color: $dark-color-3;
 			border-right-color: $dark-color-3;
+		}
+
+		&.tabs-left .nav-tabs > li:last-child a,
+		&.tabs-right .nav-tabs > li:last-child a {
+			border-bottom-color: $dark-color-3;
 		}
 
 		.nav-tabs {
@@ -307,7 +320,7 @@ body.dark {
 			border-right-color: $dark-color-4;
 		}
 
-		.nav-tabs.nav-justify li.active a {
+		.nav-tabs.nav-justified li.active a {
 			border-bottom-color: $dark-color-4;
 		}
 
@@ -471,16 +484,42 @@ body.dark {
 		border-color: $dark-color-3;
 	}
 
+	// Modal
+	.modal-content {
+		background-color: $dark-bg;
+	}
+
+	.modal-header {
+		border-bottom-color: $dark-color-3;
+		h1, h2, h3, h4, h5, h6 {
+			color: $color-default;
+		}
+		.close {
+			text-shadow: none;
+			color: #FFF;
+		}
+	}
+
+	.modal-footer {
+		border-top-color: $dark-color-3;	
+	}
+
 	// Footer
 	#footer {
-		.footer-ribbon {
-			margin-top: -96px;
-		}
 		.newsletter form .btn-default {
 			background-color: $dark-color-2;
 			border-color: $dark-color-2;
 			color: $color-default;
 		}
+	}
+
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	html.dark #header nav.mega-menu ul.nav-main li.mega-menu-item ul.dropdown-menu {
+		background: transparent !important;
 	}
 
 }

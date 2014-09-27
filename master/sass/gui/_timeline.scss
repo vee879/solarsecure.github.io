@@ -165,3 +165,56 @@ section.timeline {
 		}
 	}
 }
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	section.timeline .timeline-box {
+		float: none;
+		clear: both;
+		right: auto;
+		left: auto;
+		margin: 25px auto;
+		max-width: 70%;
+		width: auto;
+		&.right {
+			float: none;
+			clear: both;
+			right: auto;
+			left: auto;
+			margin: 25px auto;
+			max-width: 70%;
+			width: auto;
+		}
+		&.left:after, &.right:after, &.left:before, &.right:before {
+			display: none;
+		}
+	}	
+
+}
+
+@media (max-width: 479px) {
+
+	section.timeline {
+		width: auto;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+		.timeline-box {
+			margin: 15px auto;
+			max-width: 90%;
+			&.right {
+				margin: 15px auto;
+				max-width: 90%;
+			}
+		}
+	}	
+
+	article.post-large {
+		.post-image, .post-date {
+			margin-left: 0;
+		}
+		margin-left: 0;
+	}
+
+}

@@ -39,7 +39,6 @@
 		text-transform: uppercase;
 	}
 	.tp-caption {
-		filter: alpha(opacity = 0);
 		opacity: 0;
 		a {
 			color: #FFF;
@@ -82,11 +81,23 @@
 	}
 }
 
+/* Responsive */
+@media (max-width: 991px) {
+
+	.slider-container {
+		min-height: 0;
+	}
+
+}
+
 .slider {
-	height: 500px;
-	max-height: 500px;
+	height: 495px;
+	max-height: 495px;
 	position: relative;
 	> ul > li > {
+		img {
+			visibility: hidden;
+		}
 		.center-caption {
 			left: 0 !important;
 			margin-left: 0 !important;

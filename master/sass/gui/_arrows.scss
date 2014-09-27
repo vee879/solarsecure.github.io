@@ -46,3 +46,12 @@
 		height: 47px;
 	}
 }
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	.arrow {
+		display: none;
+	}
+
+}

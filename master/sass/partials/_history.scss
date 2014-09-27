@@ -39,3 +39,17 @@ ul.history {
 		}
 	}
 }
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	ul.history li {
+		.thumb {
+			display: none;
+		}
+		.featured-box {
+			margin-left: 0;
+		}
+	}
+
+}

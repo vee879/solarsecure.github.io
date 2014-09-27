@@ -37,6 +37,7 @@
 		background-repeat: repeat;
 		background-color: #999;
 		border-top: 5px solid #888;
+		overflow: hidden;
 		.row {
 			position: relative;
 		}
@@ -44,7 +45,7 @@
 			color: #E8E8E8;
 		}
 		img {
-			bottom: -20px;
+			bottom: -47px;
 			position: relative;
 		}
 		h1 {
@@ -53,4 +54,16 @@
 			margin-top: 30px;
 		}
 	}
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	.page-top {
+		padding: 16px 0;
+		h2 {
+			line-height: 37px;
+		}
+	}
+
 }

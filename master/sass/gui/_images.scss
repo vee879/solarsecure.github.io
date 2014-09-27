@@ -34,3 +34,13 @@ ul.thumbnail-gallery {
 		padding: 0;
 	}
 }
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	.thumbnail {
+		border: 0;
+		text-align: center;
+	}
+
+}

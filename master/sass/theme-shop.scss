@@ -24,7 +24,7 @@ Version: 		@@version
 	margin-top: -10px;
 	ul.products {
 		margin: 0;
-		padding: 0;
+		padding: 25px 0;
 		list-style: none;
 		&:after {
 			content: ".";
@@ -54,7 +54,7 @@ Version: 		@@version
 				filter: alpha(opacity = 0);
 				opacity: 0;
 				-webkit-transform: translate3d(0, 0, 0);
-				.icon {
+				.fa {
 					margin-right: 3px;
 					font-size: 1.1em;
 				}
@@ -477,7 +477,7 @@ Version: 		@@version
 				padding: 20px 10px;
 			}
 		}
-		.remove .icon {
+		.remove .fa {
 			font-size: 1.5em;
 		}
 		.coupon {
@@ -652,4 +652,32 @@ Version: 		@@version
 /* Product Thumb Info - Full Width */
 .full-width .product-thumb-info .product-thumb-info-image:before {
 	border-radius: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	.shop {
+		.actions-continue {
+			float: none;
+		}
+		table.cart {
+			th.product-price, td.product-price, th.product-quantity, td.product-quantity {
+				display: none;
+			}
+		}
+	}
+
+	#header nav.mega-menu .mega-menu-shop {
+		a {
+			color: #FFF;
+			.fa-angle-down {
+				display: none !important;
+			}
+		}
+		> ul.dropdown-menu {
+			display: none !important;
+		}
+	}
+
 }

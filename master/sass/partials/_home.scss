@@ -78,6 +78,19 @@
 	}
 }
 
+/* Responsive */
+@media (max-width: 767px) {
+
+	/* Home Intro */
+	.home-intro-compact {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
+
 /* Home Concept */
 .home-concept {
 	background: transparent url(../img/home-concept.png) no-repeat center 0;
@@ -138,4 +151,40 @@
 		left: 57%;
 		top: 35px;
 	}
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	.home-concept {
+		background: none;
+		.project-image {
+			margin: 60px auto 0 auto;
+		}
+		.process-image {
+			margin-top: 60px;
+		}
+	}
+
+}
+
+@media (max-width: 479px) {
+
+	.home-concept {
+		.project-image {
+			background-position: 0 0;
+			margin-left: auto;
+			max-width: 160px;
+			max-height: 220px;
+		}
+		.fc-slideshow {
+			max-height: 145px;
+			max-width: 145px;
+			img {
+				max-height: 145px;
+				max-width: 145px;
+			}
+		}
+	}
+
 }

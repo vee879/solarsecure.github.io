@@ -10,3 +10,13 @@ ul.team-list {
 		}
 	}
 }
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	ul.team-list .team-item {
+		margin: 0 auto 35px;
+		max-width: 270px;
+	}
+
+}

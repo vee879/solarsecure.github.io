@@ -74,5 +74,10 @@ section {
 				margin-left: 10px;
 			}
 		}
+		&.no-arrow {
+			&:before {
+				display: none;
+			}
+		}
 	}
 }

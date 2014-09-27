@@ -4,7 +4,7 @@
 	a {
 		display: inline-block;
 	}
-	.icon {
+	.fa {
 		font-size: 2.5em;
 	}
 	.portfolio-nav,
@@ -17,10 +17,10 @@
 	.portfolio-nav a {
 		width: 40%;
 	}
-	.portfolio-nav-all .icon {
+	.portfolio-nav-all .fa {
 		font-size: 2.7em;
 	}
-	.icon-angle-right {
+	.fa-angle-right {
 		text-align: right;
 	}
 	.portfolio-nav-prev {
@@ -52,12 +52,12 @@
 				text-decoration: none;
 				color: #B1B1B1;
 				&:hover {
-					.icon-heart {
+					.fa-heart {
 						color: #E53F51;
 					}
 				}
 			}
-			.icon {
+			.fa {
 				margin-right: 4px;
 			}
 		}
@@ -101,4 +101,13 @@ ul {
 			margin-bottom: 5px;
 		}
 	}
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	.portfolio-nav, .portfolio-nav-all {
+		display: none;
+	}	
+
 }

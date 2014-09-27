@@ -50,7 +50,13 @@ body {
 			}
 		}
 	}
-	&.boxed #header.single-menu {
+}
+
+html.boxed {
+	#header.single-menu {
+		padding: 4px 0 7px;
+	}
+	body.sticky-menu-active #header.single-menu {
 		padding: 15px 0 7px;
 	}
 }

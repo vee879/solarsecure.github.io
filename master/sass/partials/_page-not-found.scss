@@ -15,3 +15,17 @@
 		line-height: 36px;
 	}
 }
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	.page-not-found {
+		margin: 0;
+		h2 {
+			font-size: 100px;
+			letter-spacing: 0;
+			line-height: 100px;
+		}
+	}
+
+}

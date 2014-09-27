@@ -332,3 +332,22 @@ ul.simple-post-list {
 		font-size: 0.8em;
 	}
 }
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	ul.comments {
+		li {
+			border-left: 8px solid #DDDDDD;
+			clear: both;
+			padding: 0 0 0 10px;
+			.img-thumbnail {
+				display: none;
+			}
+		}
+		.comment-arrow {
+			display: none;
+		}
+	}	
+
+}

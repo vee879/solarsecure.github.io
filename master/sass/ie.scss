@@ -58,3 +58,13 @@ html.ie8 div.plan-ribbon-wrapper div.plan-ribbon {
 	text-align: left;
 	padding-left: 20px;
 }
+
+/* Parallax */
+html.ie8 .parallax {
+	background-position: 50% 50% !important;
+}
+
+/* Thumbs */
+html.ie8 .thumb-info .thumb-info-title {
+	background: #000;
+}

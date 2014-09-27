@@ -78,14 +78,32 @@ body {
 			}
 		}
 	}
+}
+
+html {
 	&.boxed #header.flat-menu {
 		padding: 15px 0 7px;
-		border-radius: 5px 5px 0 0;
 		&.clean-top {
 			padding-bottom: 8px;
 		}
 		&.colored {
 			padding: 0 0 7px;
 		}
+		&.single-menu {
+			nav {
+				ul.nav-main {
+					ul.dropdown-menu {
+						margin-top: -1px;
+					}
+				}
+			}
+		}
+		.header-top {
+			border-radius: 5px 5px 0 0;
+		}
+	}
+	&.boxed body.sticky-menu-active #header.flat-menu.clean-top,
+	&.boxed body.sticky-menu-active #header.flat-menu.colored {
+		padding: 15px 0 7px;
 	}
 }

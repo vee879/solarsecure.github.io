@@ -21,7 +21,17 @@
 /* Icons List */
 ul.icons {
 	list-style: none;
-	[class^="icon-"] {
+	[class^="fa-"] {
 		margin-right: 5px;
 	}
+}
+
+/* Font Awesome List */
+.fontawesome-icon-list {
+	[class*="col-md-"] {
+    	margin-bottom: 9px;
+    }
+    > section {
+    	margin-top: 25px;
+    }
 }

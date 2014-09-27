@@ -47,16 +47,56 @@ ul.nav-pills > li.active > a {
 	}
 }
 
+/* Labels */
+.label-primary {
+	background-color: @skinColor;
+}
+
 // Pagination
-.pagination > .active > {
-	a, span, a:hover, span:hover, a:focus, span:focus {
-		background-color: @skinColor !important;
+.pagination {
+	> li > a,
+	> li > span,
+	> li > a:hover,
+	> li > span:hover,
+	> li > a:focus,
+	> li > span:focus {
+		color: @skinColor;
+	}
+	> .active > a,
+	> .active > span,
+	> .active > a:hover,
+	> .active > span:hover,
+	> .active > a:focus,
+	> .active > span:focus {
+		background-color: @skinColor;
+		border-color: @skinColor;
+	}
+}
+
+body.dark .pagination {
+	> li > a,
+	> li > span,
+	> li > a:hover,
+	> li > span:hover,
+	> li > a:focus,
+	> li > span:focus {
+		color: @skinColor;
+	}
+	> .active > a,
+	> .active > span,
+	> .active > a:hover,
+	> .active > span:hover,
+	> .active > a:focus,
+	> .active > span:focus {
+		background-color: @skinColor;
+		border-color: @skinColor;
 	}
 }
 
 // Buttons
 .btn-primary,
-.pagination > .active > a {
+.pagination > .active > a,
+body.dark .pagination > .active > a {
 	border-color: @skinColor !important;
 	.buttonBackground(@skinColor, spin(@skinColor, 20%));
 }
@@ -97,7 +137,7 @@ section.page-top.custom-product {
 	background-color: @skinColor;
 }
 
-.feature-box.secundary .feature-box-icon i.icon {
+.feature-box.secundary .feature-box-icon i.fa {
 	color: @skinColor;
 }
 
@@ -119,6 +159,10 @@ section.page-top.custom-product {
 	background-color: @skinColor;
 }
 
+.img-thumbnail .zoom {
+	background-color: @skinColor;
+}
+
 // Inverted
 .inverted {
 	background-color: @skinColor;
@@ -131,13 +175,20 @@ section.page-top.custom-product {
 			color: @skinColor;
 		}
 
-		a:hover {
+		a:hover,
+		a:focus {
 			border-top-color: @skinColor;
 		}
 
 		li.active a {
 			border-top-color: @skinColor;
 			color: @skinColor;
+		}
+		&.nav-justified {
+			a:hover,
+			a:focus {
+				border-top-color: @skinColor;
+			}
 		}
 	}
 	&.tabs-bottom {
@@ -169,7 +220,7 @@ section.page-top.custom-product {
 				border-right-color: @skinColor;
 			}
 		}
-	}	
+	}
 }
 
 // Lists
@@ -182,11 +233,11 @@ i.icon-featured {
 	background-color: @skinColor;
 }
 
-.parallax blockquote i.icon-quote-left {
+.parallax blockquote i.fa-quote-left {
 	color: @skinColor;
 }
 
-section.video blockquote i.icon-quote-left {
+section.video blockquote i.fa-quote-left {
 	color: @skinColor;
 }
 
@@ -389,6 +440,6 @@ ul.history li .featured-box .box-content {
 }
 
 // Boxed
-body.boxed .body {
+html.boxed .body {
 	border-top-color: @skinColor;
 }

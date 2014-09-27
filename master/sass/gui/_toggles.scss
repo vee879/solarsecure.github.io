@@ -18,7 +18,7 @@
 			@include transition (all .15s ease-out);
 			background: #F4F4F4;
 			border-left: 3px solid #CCC;
-			border-radius: 8px;
+			border-radius: 5px;
 			color: #CCC;
 			display: block;
 			font-size: 1.1em;
@@ -31,10 +31,10 @@
 				background: none;
 			}
 			i {
-				&.icon-minus {
+				&.fa-minus {
 					display: none;
 				}
-				&.icon-plus {
+				&.fa-plus {
 					display: inline;
 				}
 			}
@@ -71,14 +71,18 @@
 		}
 		.toggle-content {
 			display: none;
+			> p {
+				margin-bottom: 0;
+				padding: 10px 0;
+			}
 		}
 	}
 	&.active {
 		i {
-			&.icon-minus {
+			&.fa-minus {
 				display: inline;
 			}
-			&.icon-plus {
+			&.fa-plus {
 				display: none;
 			}
 		}
@@ -87,7 +91,7 @@
 			border-color: #CCC;
 			&:before {
 				border: 6px solid transparent;
-				border-top-color: inherit;
+				border-top-color: #FFF;
 				margin-top: -3px;
 				right: 10px;
 			}

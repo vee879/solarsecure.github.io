@@ -1,28 +1,31 @@
 /* Circular Bars */
 .circular-bar {
 	margin-bottom: 25px;
-	min-height: 210px;
-	.knob {
-		visibility: hidden;
+	.circular-bar-chart {
+		position: relative;
 	}
 	strong {
 		display: block;
 		font-weight: 600;
-		font-size: 22px;
+		font-size: 18px;
 		line-height: 30px;
+		position: absolute;
+		top: 35%;
+		width: 80%;
+		left: 10%;
+		text-align: center;
 	}
 	label {
 		display: block;
 		font-weight: 100;
 		font-size: 17px;
 		line-height: 20px;
+		position: absolute;
+		top: 50%;
+		width: 80%;
+		left: 10%;
+		text-align: center;
 	}
-}
-
-.circular-bar-content {
-	margin-bottom: 70px;
-	margin-top: -125px;
-	text-align: center;
 }
 
 /* Progress */
@@ -35,6 +38,7 @@
 }
 
 .progress-bar {
+	background-color: #CCC;
 	box-shadow: none;
 	position: relative;
 	border-radius: 25px;

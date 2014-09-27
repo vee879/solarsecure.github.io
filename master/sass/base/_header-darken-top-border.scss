@@ -9,21 +9,20 @@
 }
 
 /* Header Darken Top Border - Sticky Menu / Boxed */
-body {
-	&.sticky-menu-active #header.darken-top-border {
-		nav {
-			ul.nav-main {
-				margin-top: 33px;
-				> li {
-					> a, &:hover > a {
-						padding-bottom: 22px;
-						padding-top: 30px;
-					}
+body.sticky-menu-active #header.darken-top-border {
+	nav {
+		ul.nav-main {
+			margin-top: 33px;
+			> li {
+				> a, &:hover > a {
+					padding-bottom: 22px;
+					padding-top: 30px;
 				}
 			}
 		}
 	}
-	&.boxed #header.darken-top-border {
-		border-top: 0;
-	}
+}
+
+html.boxed #header.darken-top-border {
+	border-top: 0;
 }

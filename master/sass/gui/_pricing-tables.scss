@@ -1,8 +1,9 @@
 /* Pricing Tables */
 .pricing-table {
-	margin: 25px 0 0 -15px;
-	padding-left: 0;
+	margin: 10px 0;
+	padding: 0 15px;
 	text-align: center;
+
 	ul {
 		list-style: none;
 		margin: 20px 0 0 0;
@@ -85,13 +86,17 @@
 			right: 0;
 		}
 	}
+	[class*="col-md-"] {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.plan {
 		background: #FFF;
 		border: 1px solid #ddd;
 		border-radius: 5px;
 		color: #333;
 		margin-bottom: 35px;
-		margin-right: -31px;
+		margin-right: 0;
 		padding: 20px;
 		position: relative;
 		text-shadow: 0 1px rgba(255, 255, 255, 0.8);
@@ -102,9 +107,25 @@
 }
 
 /* Pricing Tables Boxed */
-body.boxed .pricing-table {
-	margin-left: -31px;
+html.boxed .pricing-table {
 	.plan, h3 {
 		border-radius: 0;
 	}
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+
+	/* Pricing Tables */
+	.pricing-table {
+		margin-left: 0px;
+		.plan {
+			margin-right: 0;
+		}
+	}
+
+	html.boxed .pricing-table {
+		margin-left: 0;
+	}
+
 }

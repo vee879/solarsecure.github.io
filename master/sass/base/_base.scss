@@ -1,8 +1,3 @@
-html {
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
 body {
 	background-color: $light-bg;
 	color: $color-default;
@@ -10,4 +5,13 @@ body {
 	font-size: $body-font-size;
 	line-height: $body-line-height;
 	margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	body {
+		font-size: 13px;
+	}
+
 }

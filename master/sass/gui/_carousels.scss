@@ -36,3 +36,12 @@
 .highlight .owl-theme .owl-controls .owl-page span {
 	background-color: #FFF;
 }
+
+/* Responsive */
+@media (max-width: 479px) {
+
+	.owl-carousel-spaced {
+		margin-left: 0;
+	}
+
+}

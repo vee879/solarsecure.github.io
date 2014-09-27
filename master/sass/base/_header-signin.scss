@@ -11,7 +11,7 @@
 		right: 8px;
 		border-radius: 6px 0 6px 6px;
 	}
-	.icon-user {
+	.fa-user {
 		margin-right: 5px;
 	}
 	.mega-menu-sub-title {
@@ -97,4 +97,45 @@ body #header nav.mega-menu .mega-menu-signin ul.dropdown-menu {
 		padding: 0;
 		margin: 0;
 	}
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+	#header nav.mega-menu ul.nav-main .mega-menu-signin {
+		margin-right: 0;
+		a {
+			color: #FFF;
+			.fa-angle-down {
+				display: none !important;
+			}
+		}
+		ul.dropdown-menu {
+			margin: 25px 0 0 0 !important;
+			padding: 0 0 0 8px;
+			width: 100%;
+			right: 0;
+			li a {
+				color: #FFF;
+				padding: 6px 0 !important;
+			}
+		}
+		&.logged {
+			.user-avatar {
+				strong, span {
+					color: #FFF !important;
+				}
+			}
+			.list-account-options {
+				a {
+					color: #FFF !important;
+					&:hover {
+						color: #FFF !important;
+					}
+				}
+				margin: 25px 0 0 0 !important;
+			}
+		}
+	}	
+
 }

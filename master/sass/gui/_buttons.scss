@@ -1,6 +1,16 @@
 /* Buttons */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+	background-color: #CCC;
+	border-color: #CCC;
+}
+
 .btn-primary[disabled] {
 	border-color: #CCC !important;
+	background-color: #CCC;
 	background-image: none;
 }
 

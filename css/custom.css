@@ -6,3 +6,10 @@ left: 0;
 position: absolute;
 top: 0;
 #mfn-rev-slider { min-height:437px; }
+#centering {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -317px;
+	margin-left: -586px;
+}

@@ -1,0 +1,570 @@
+#iPicture
+{
+	font-family:'Lucida Sans Unicode','Lucida Grande',Tahoma,Arial,san-serif;
+	font-size:62.5%;
+	color:#FFF;
+}
+
+.ip_slide
+{
+	position:relative;
+}
+
+.ip_tooltip
+{
+	position:absolute;
+	text-align:left;
+	padding:0;
+}
+
+.ip_descr:before
+{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+}
+
+.ip_descr.ltr-before:before
+{
+	border-left:8px solid transparent;
+	top:15px;
+	left:-8px;
+}
+
+.ip_descr.rtl-before:before
+{
+	border-right:8px solid transparent;
+	top:15px;
+	right:-8px;
+}
+
+.ip_descr.btt-before:before
+{
+	border-right:12px solid transparent;
+	bottom:-8px;
+	left:16px;
+}
+
+.bgwhite.btt-before:before
+{
+	border-top:8px solid rgba(255,255,255,0.9);
+}
+
+.bgblack.btt-before:before
+{
+	border-top:8px solid rgba(0,0,0,0.8);
+}
+
+.ip_descr.ttb-before:before
+{
+	border-right:12px solid transparent;
+	top:-8px;
+	left:16px;
+}
+
+.bgwhite.ttb-before:before
+{
+	border-bottom:8px solid rgba(255,255,255,0.9);
+}
+
+.bgblack.ttb-before:before
+{
+	border-bottom:8px solid rgba(0,0,0,0.8);
+}
+
+.ip_tooltip .ip_descr
+{
+	font:bold 13px Lucida Grande,Arial,sans-serif;
+	opacity:0;
+	position:absolute;
+	text-align:center;
+	transition:left .25s ease-out, opacity .25s ease-out, right .25s ease-out, bottom .25s ease-out, top .25s ease-out;
+	-moz-transition:left .25s ease-out, opacity .25s ease-out, right .25s ease-out, bottom .25s ease-out, top .25s ease-out;
+	-webkit-transition:left .25s ease-out, opacity .25s ease-out, right .25s ease-out, bottom .25s ease-out, top .25s ease-out;
+	z-index:-10;
+	display:block;
+	width:auto;
+	height:auto;
+	min-height:15px;
+	padding:10px;
+}
+
+.ip_descr p
+{
+	min-width:200px;
+}
+
+.ip_tooltip .ltr-before
+{
+	left:-3px;
+}
+
+.ip_tooltip .rtl-before
+{
+	right:-60px;
+}
+
+.ip_tooltip .ttb-before
+{
+	top:-3px;
+}
+
+.ip_tooltip .btt-before
+{
+	bottom:-60px;
+}
+
+.ltr-slide
+{
+	opacity:1!important;
+	left:45px!important;
+	padding:0;
+}
+
+.rtl-slide
+{
+	opacity:1!important;
+	right:13px!important;
+	padding:0;
+}
+
+.btt-slide
+{
+	opacity:1!important;
+	bottom:13px!important;
+	padding:0;
+}
+
+.ttb-slide
+{
+	opacity:1!important;
+	top:45px!important;
+	padding:0;
+}
+
+.pass-ltr
+{
+	display:block;
+	float:right;
+	height:50px;
+	left:30px;
+	position:absolute;
+	width:20px;
+}
+
+.pass-rtl
+{
+	display:block;
+	float:right;
+	height:50px;
+	right:-30px;
+	position:absolute;
+	width:50px;
+}
+
+.pass-btt
+{
+	display:block;
+	float:right;
+	height:50px;
+	bottom:-30px;
+	position:absolute;
+	width:40px;
+}
+
+.pass-ttb
+{
+	display:block;
+	float:right;
+	height:20px;
+	top:30px;
+	position:absolute;
+	width:50px;
+}
+
+.descrContainer
+{
+	width:0;
+	height:0;
+	display:block;
+	visibility:hidden;
+}
+
+.show .descrContainer
+{
+	width:100%;
+	height:100%;
+	visibility:visible;
+}
+
+.ip_img32 .button
+{
+	width:32px;
+	height:32px;
+	float:left!important;
+	position:absolute;
+}
+
+.ip_img24 .button
+{
+	width:24px;
+	height:24px;
+	float:left!important;
+	position:absolute;
+	top:18px;
+	left:18px;
+}
+
+.bg32 .button
+{
+	width:32px;
+	height:32px;
+	float:left!important;
+	position:absolute;
+	top:9px;
+	left:9px;
+}
+
+.ip_bg24 .button
+{
+	width:24px;
+	height:24px;
+	float:left!important;
+	position:absolute;
+	top:9px;
+	left:9px;
+	border-radius:24px;
+}
+
+.bgblack
+{
+	background:rgba(0,0,0,0.8);
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.bgwhite
+{
+	background:rgba(255,255,255,0.9);
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	color:#000;
+}
+
+.roundBgW
+{
+	border-radius:30px;
+	position:absolute;
+	animation:pulseW 1.5s 1s infinite alternate;
+	-moz-animation:pulseW 1.5s 1s infinite alternate;
+	-webkit-animation:pulseW 1.5s 1s infinite alternate;
+	-o-animation:pulseW 1.5s 1s infinite alternate;
+}
+
+.roundBgWIn
+{
+	border-radius:30px;
+	position:absolute;
+	top:4px;
+	left:4px;
+	animation:pulseWIn 1.5s .5s infinite alternate;
+	-moz-animation:pulseWIn 1.5s .5s infinite alternate;
+	-webkit-animation:pulseWIn 1.5s .5s infinite alternate;
+	-o-animation:pulseWIn 1.5s .5s infinite alternate;
+}
+
+.roundBgWInner
+{
+	border-radius:30px;
+	position:absolute;
+	top:7px;
+	left:7px;
+	animation:pulseWInner 1.5s infinite alternate;
+	-moz-animation:pulseWInner 1.5s infinite alternate;
+	-webkit-animation:pulseWInner 1.5s infinite alternate;
+	-o-animation:pulseWInner 1.5s infinite alternate;
+}
+
+to
+{
+	background:rgba(0,0,0,0.6);
+}
+
+.roundBgB
+{
+	border-radius:30px;
+	position:absolute;
+	animation:pulse 1.5s 1s infinite alternate;
+	-moz-animation:pulseB 1.5s 1s infinite alternate;
+	-webkit-animation:pulseB 1.5s 1s infinite alternate;
+	-o-animation:pulseB 1.5s 1s infinite alternate;
+}
+
+.roundBgBIn
+{
+	border-radius:30px;
+	position:absolute;
+	top:4px;
+	left:4px;
+	animation:pulseBIn 1.5s .5s infinite alternate;
+	-moz-animation:pulseBIn 1.5s .5s infinite alternate;
+	-webkit-animation:pulseBIn 1.5s .5s infinite alternate;
+	-o-animation:pulseBIn 1.5s .5s infinite alternate;
+}
+
+.roundBgBInner
+{
+	border-radius:30px;
+	position:absolute;
+	top:7px;
+	left:7px;
+	animation:pulseBInner 1.5s infinite alternate;
+	-moz-animation:pulseBInner 1.5s infinite alternate;
+	-webkit-animation:pulseBInner 1.5s infinite alternate;
+	-o-animation:pulseBInner 1.5s infinite alternate;
+}
+
+.moregold
+{
+	background:url(img/moregold/button.png) no-repeat scroll left center transparent;
+}
+
+.moregrey
+{
+	background:url(img/moregrey/button.png) no-repeat scroll left center transparent;
+}
+
+.moreblack
+{
+	background:url(img/moreblack/button.png) no-repeat scroll left center transparent;
+}
+
+.moredarkblue
+{
+	background:url(img/moredarkblue/button.png) no-repeat scroll left center transparent;
+}
+
+.moreblue
+{
+	background:url(img/moreblue/button.png) no-repeat scroll left center transparent;
+}
+
+.morelightblue
+{
+	background:url(img/morelightblue/button.png) no-repeat scroll left center transparent;
+}
+
+.morelightblue2
+{
+	background:url(img/morelightblue2/button.png) no-repeat scroll left center transparent;
+}
+
+.morewatergreen
+{
+	background:url(img/morewatergreen/button.png) no-repeat scroll left center transparent;
+}
+
+.morelightgreen
+{
+	background:url(img/morelightgreen/button.png) no-repeat scroll left center transparent;
+}
+
+.moregreen
+{
+	background:url(img/moregreen/button.png) no-repeat scroll left center transparent;
+}
+
+.moreyellow
+{
+	background:url(img/moreyellow/button.png) no-repeat scroll left center transparent;
+}
+
+.moreorange
+{
+	background:url(img/moreorange/button.png) no-repeat scroll left center transparent;
+}
+
+.morered
+{
+	background:url(img/morered/button.png) no-repeat scroll left center transparent;
+}
+
+.morepurple
+{
+	background:url(img/morepurple/button.png) no-repeat scroll left center transparent;
+}
+
+.moreviolet
+{
+	background:url(img/moreviolet/button.png) no-repeat scroll left center transparent;
+}
+
+.morelightviolet
+{
+	background:url(img/morelightviolet/button.png) no-repeat scroll left center transparent;
+}
+
+.morefucsia
+{
+	background:url(img/morefucsia/button.png) no-repeat scroll left center transparent;
+}
+
+.beadgold
+{
+	background:url(img/beadgold/button.png) no-repeat scroll left center transparent;
+}
+
+.beadgrey
+{
+	background:url(img/beadgrey/button.png) no-repeat scroll left center transparent;
+}
+
+.beadblack
+{
+	background:url(img/beadblack/button.png) no-repeat scroll left center transparent;
+}
+
+.beaddarkblue
+{
+	background:url(img/beaddarkblue/button.png) no-repeat scroll left center transparent;
+}
+
+.beadblue
+{
+	background:url(img/beadblue/button.png) no-repeat scroll left center transparent;
+}
+
+.beadlightblue
+{
+	background:url(img/beadlightblue/button.png) no-repeat scroll left center transparent;
+}
+
+.beadlightblue2
+{
+	background:url(img/beadlightblue2/button.png) no-repeat scroll left center transparent;
+}
+
+.beadwatergreen
+{
+	background:url(img/beadwatergreen/button.png) no-repeat scroll left center transparent;
+}
+
+.beadlightgreen
+{
+	background:url(img/beadlightgreen/button.png) no-repeat scroll left center transparent;
+}
+
+.beadgreen
+{
+	background:url(img/beadgreen/button.png) no-repeat scroll left center transparent;
+}
+
+.beadyellow
+{
+	background:url(img/beadyellow/button.png) no-repeat scroll left center transparent;
+}
+
+.beadorange
+{
+	background:url(img/beadorange/button.png) no-repeat scroll left center transparent;
+}
+
+.beadred
+{
+	background:url(img/beadred/button.png) no-repeat scroll left center transparent;
+}
+
+.beadpurple
+{
+	background:url(img/beadpurple/button.png) no-repeat scroll left center transparent;
+}
+
+.beadviolet
+{
+	background:url(img/beadviolet/button.png) no-repeat scroll left center transparent;
+}
+
+.beadlightviolet
+{
+	background:url(img/beadlightviolet/button.png) no-repeat scroll left center transparent;
+}
+
+.beadfucsia
+{
+	background:url(img/beadfucsia/button.png) no-repeat scroll left center transparent;
+}
+
+.ipic-orange
+{
+	background-image:0 color-stop(0.54,rgb(255,183,83)) );
+}
+
+.bgwhite.ltr-before:before,.bgwhite.rtl-before:before
+{
+	border-top:12px solid rgba(255,255,255,0.9);
+}
+
+.bgblack.ltr-before:before,.bgblack.rtl-before:before
+{
+	border-top:12px solid rgba(0,0,0,0.8);
+}
+
+.ip_img32 .roundBgW,.ip_img32 .roundBgB
+{
+	height:50px;
+	left:-9px;
+	position:absolute;
+	top:-9px;
+	width:50px;
+}
+
+.ip_img32 .roundBgWIn,.ip_img32 .roundBgBIn
+{
+	height:42px;
+	left:-5px;
+	position:absolute;
+	top:-5px;
+	width:42px;
+}
+
+.ip_img32 .roundBgWInner,.ip_img32 .roundBgBInner
+{
+	height:36px;
+	left:-2px;
+	position:absolute;
+	top:-2px;
+	width:36px;
+}
+
+.ip_img24 .roundBgW,.ip_img24 .roundBgB
+{
+	height:56px;
+	width:56px;
+}
+
+.ip_img24 .roundBgWIn,.ip_img24 .roundBgBIn
+{
+	height:44px;
+	width:44px;
+}
+
+.ip_img24 .roundBgWInner,.ip_bg24 .roundBgWIn,.ip_img24 .roundBgBInner,.ip_bg24 .roundBgBIn
+{
+	height:34px;
+	width:34px;
+}
+
+.ip_bg24 .roundBgW,.ip_bg24 .roundBgB
+{
+	height:42px;
+	width:42px;
+}
+
+.ip_bg24 .roundBgWInner,.ip_bg24 .roundBgBInner
+{
+	height:28px;
+	width:28px;
+}

@@ -30,9 +30,7 @@
 /* Sort Destination */
 .sort-destination {
 	&.full-width {
-		margin: 0 0 -81px;
 		position: relative;
-		top: -51px;
 		.isotope-item {
 			width: 20%;
 			float: left;
@@ -48,7 +46,14 @@
 				border-radius: 0;
 				float: left;
 			}
+		}
 	}
+}
+
+.sort-source-wrapper + .sort-destination {
+	&.full-width {
+		margin: 0 0 -81px;
+		top: -51px;
 	}
 }
 
@@ -78,6 +83,10 @@
 		.nav {
 			margin: 0;
 		}
+	}
+
+	.sort-destination {
+		height: auto !important;
 	}
 
 	.sort-destination, .isotope-item {

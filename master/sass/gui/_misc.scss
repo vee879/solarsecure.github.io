@@ -30,6 +30,36 @@ li {
 	padding-right: 10px;
 }
 
+h1 .inverted {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h2 .inverted {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+h3 .inverted {
+	padding-left: 2px;
+	padding-right: 2px;;
+}
+
+h4 .inverted {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+h5 .inverted {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+h6 .inverted {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
 /* Clearfix */
 .clearfix {
 	display: inline-block;

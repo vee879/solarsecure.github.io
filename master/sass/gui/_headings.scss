@@ -7,13 +7,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3.2em;
+	font-size: 2.6em;
 	line-height: 44px;
 	margin: 0 0 44px 0;
 }
 
 h2 {
-	font-size: 2.6em;
+	font-size: 2.2em;
 	font-weight: 300;
 	line-height: 42px;
 	margin: 0 0 32px 0;
@@ -147,10 +147,6 @@ h4.text-shadow,
 h5.text-shadow,
 h6.text-shadow {
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-}
-
-h2 .inverted {
-	min-height: 60px;
 }
 
 /* Modal Titles */

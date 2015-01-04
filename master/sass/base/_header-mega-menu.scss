@@ -18,6 +18,10 @@
 							font-weight: 600;
 							padding-bottom: 5px;
 							text-transform: uppercase;
+							margin-top: 20px;
+							&:first-child {
+								margin-top: 0;
+							}
 							.not-included {
 								color: #b7b7b7;
 								display: block;

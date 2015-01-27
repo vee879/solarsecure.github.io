@@ -8,6 +8,7 @@ Disallow: /php/
 Disallow: /vendor/
 Disallow: /thank-you.html
 Disallow: /page-404.html
+Disallow: /doc/
 
 
 

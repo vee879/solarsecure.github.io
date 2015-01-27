@@ -10,10 +10,10 @@ blockquote.testimonial {
 	padding: 10px 50px;
 	position: relative;
 	&:before {
-		left: 10px;
+		#{$left}: 10px;
 		top: 0;
 		color: #FFF;
-		content: "\201C";
+		content: if-ltr("\201C", "\201D");
 		font-size: 80px;
 		font-style: normal;
 		line-height: 1;
@@ -21,14 +21,13 @@ blockquote.testimonial {
 	}
 	&:after {
 		color: #FFF;
-		content: "\201C";
+		content: if-ltr("\201D", "\201C");
 		font-size: 80px;
 		font-style: normal;
 		line-height: 1;
 		position: absolute;
 		bottom: -0.5em;
-		content: "\201D";
-		right: 10px;
+		#{$right}: 10px;
 	}
 	p {
 		color: #FFF;
@@ -41,20 +40,20 @@ blockquote.testimonial {
 
 /* Testimonials Arrow */
 .testimonial-arrow-down {
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
+	border-#{$left}: 15px solid transparent;
+	border-#{$right}: 15px solid transparent;
 	border-top: 15px solid #CCC;
 	height: 0;
-	margin: 0 0 0 25px;
+	margin: side-values(0 0 0 25px);
 	width: 0;
 }
 
 /* Testimonials Author */
 .testimonial-author {
-	margin: 8px 0 0 8px;
+	margin: side-values(8px 0 0 8px);
 	.img-thumbnail {
-		float: left;
-		margin-right: 10px;
+		float: $left;
+		margin-#{$right}: 10px;
 		width: auto;
 		img {
 			max-width: 60px;
@@ -72,8 +71,8 @@ blockquote.testimonial {
 	}
 	p {
 		color: #999;
-		margin: 0 0 0 25px;
-		text-align: left;
+		margin: side-values(0 0 0 25px);
+		text-align: $left;
 	}
 }
 
@@ -85,25 +84,24 @@ blockquote.testimonial-carousel {
 	padding: 10px 50px;
 	position: relative;
 	&:before {
-		left: 10px;
+		#{$left}: 10px;
 		top: 0;
 		color: #FFF;
-		content: "\201C";
+		content: if-ltr("\201C", "\201D");
 		font-size: 80px;
 		font-style: normal;
 		line-height: 1;
 		position: absolute;
 	}
 	&:after {
+		#{$right}: 10px;
 		color: #FFF;
-		content: "\201C";
 		font-size: 80px;
 		font-style: normal;
 		line-height: 1;
 		position: absolute;
 		bottom: -0.5em;
-		content: "\201D";
-		right: 10px;
+		content: if-ltr("\201D", "\201C");
 	}
 	p {
 		margin: 10px 0;

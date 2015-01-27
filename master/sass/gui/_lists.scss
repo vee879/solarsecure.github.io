@@ -6,11 +6,15 @@ ul {
 		}
 		&.icons li i {
 			color: #CCC;
-			margin-right: 5px;
+			margin-#{$right}: 5px;
 		}
 		&.pull-left li {
-			text-align: left;
+			text-align: $left;
 		}
+	}
+	&.list-unstyled {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 

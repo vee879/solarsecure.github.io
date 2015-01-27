@@ -49,11 +49,11 @@ a, a:hover, a:focus {
 /* Drop Caps */
 p.drop-caps {
 	&:first-child:first-letter {
-		float: left;
+		float: $left;
 		font-size: 75px;
 		line-height: 60px;
 		padding: 4px;
-		margin-right: 5px;
+		margin-#{$right}: 5px;
 		margin-top: 5px;
 		font-family: Georgia;
 	}
@@ -61,7 +61,7 @@ p.drop-caps {
 		background-color: #CCC;
 		color: #FFF;
 		padding: 6px;
-		margin-right: 5px;
+		margin-#{$right}: 5px;
 		border-radius: 4px;
 	}
 }

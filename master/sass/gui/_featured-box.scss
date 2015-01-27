@@ -4,13 +4,13 @@
 	@include background(linear-gradient(to bottom, #FFF 1%, #F9F9F9 98%) repeat scroll 0 0 rgba(0, 0, 0, 0));
 	@include box-sizing(border-box);
 	border-bottom: 1px solid #DFDFDF;
-	border-left: 1px solid #ECECEC;
+	border-#{$left}: 1px solid #ECECEC;
 	border-radius: 8px;
-	border-right: 1px solid #ECECEC;
+	border-#{$right}: 1px solid #ECECEC;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
 	margin-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-#{$left}: auto;
+	margin-#{$right}: auto;
 	margin-top: 20px;
 	min-height: 100px;
 	position: relative;
@@ -41,7 +41,7 @@
 		margin-bottom: 30px;
 		margin-top: 45px;
 		&.info-content {
-			text-align: left;
+			text-align: $left;
 		}
 	}
 }
@@ -103,11 +103,11 @@
 	&.login {
 		margin-top: -30px;
 		.featured-box {
-			text-align: left;
+			text-align: $left;
 		}
 	}
 	&.cart .featured-box {
-		text-align: left;
+		text-align: $left;
 	}
 	.featured-box-cart {
 		margin-top: 0;
@@ -122,17 +122,17 @@
 		border-radius: 35px;
 		color: #FFF;
 		display: inline-block;
-		float: left;
+		float: $left;
 		height: 35px;
 		line-height: 35px;
-		margin-right: 10px;
+		margin-#{$right}: 10px;
 		position: relative;
 		text-align: center;
 		top: 5px;
 		width: 35px;
 	}
 	.feature-box-info {
-		padding-left: 50px;
+		padding-#{$left}: 50px;
 	}
 }
 
@@ -151,7 +151,7 @@
 			}
 		}
 		.feature-box-info {
-			padding-left: 60px;
+			padding-#{$left}: 60px;
 		}
 	}
 }

@@ -15,7 +15,7 @@ html.dark {
 	#header {
 		background: $dark-bg;
 		border-top-color: $darken-color-1;
-		border-radius: 6px 6px 0 0;
+		border-radius: corner-values(6px 6px 0 0);
 
 		nav ul.nav-top li a:hover {
 			background-color: $dark-color-3;
@@ -136,7 +136,7 @@ html.dark {
 				}
 				&:after {
 					background: $dark-color-3;
-					border-right-color: $dark-color-3;
+					border-#{$right}-color: $dark-color-3;
 					border-top-color: $dark-color-3;
 				}
 			}
@@ -146,7 +146,7 @@ html.dark {
 				}
 				&:after {
 					background: $dark-color-3;
-					border-left-color: $dark-color-3;
+					border-#{$left}-color: $dark-color-3;
 					border-bottom-color: $dark-color-3;
 				}
 			}
@@ -236,8 +236,8 @@ html.dark {
 	// Featured Boxes
 	.featured-box {
 		background: $dark-color-4;
-		border-left-color: $dark-color-4;
-		border-right-color: $dark-color-4;
+		border-#{$left}-color: $dark-color-4;
+		border-#{$right}-color: $dark-color-4;
 		border-bottom-color: $dark-color-4;
 		&.secundary h4 {
 			color: #FFF;
@@ -286,8 +286,8 @@ html.dark {
 		.nav-tabs li a,
 		.nav-tabs li a:hover {
 			border-top-color: $dark-color-3;
-			border-left-color: $dark-color-3;
-			border-right-color: $dark-color-3;
+			border-#{$left}-color: $dark-color-3;
+			border-#{$right}-color: $dark-color-3;
 			background: $dark-color-3;
 		}
 
@@ -299,8 +299,8 @@ html.dark {
 		&.tabs-left .nav-tabs > li a,
 		&.tabs-right .nav-tabs > li a {
 			background: $dark-color-3;
-			border-left-color: $dark-color-3;
-			border-right-color: $dark-color-3;
+			border-#{$left}-color: $dark-color-3;
+			border-#{$right}-color: $dark-color-3;
 		}
 
 		&.tabs-left .nav-tabs > li:last-child a,
@@ -316,8 +316,8 @@ html.dark {
 		.nav-tabs li.active a:hover,
 		.nav-tabs li.active a:focus {
 			background: $dark-color-4;
-			border-left-color: $dark-color-4;
-			border-right-color: $dark-color-4;
+			border-#{$left}-color: $dark-color-4;
+			border-#{$right}-color: $dark-color-4;
 		}
 
 		.nav-tabs.nav-justified li.active a {
@@ -388,6 +388,9 @@ html.dark {
 		li {
 			.thumb {
 				background-image: url(../img/history-thumb-dark.png);
+				@include if-rtl {
+					background-position: 0 -200px;
+				}
 			}
 		}
 	}
@@ -423,7 +426,7 @@ html.dark {
 	}
 
 	ul.comments .comment-arrow {
-		border-right-color: $dark-color-3;
+		border-#{$right}-color: $dark-color-3;
 	}
 
 	// Pricing Tables

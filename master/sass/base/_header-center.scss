@@ -7,7 +7,7 @@
 			margin-top: 5px;
 		}
 		nav {
-			float: left;
+			float: $left;
 			text-align: center;
 			width: 100%;
 			ul.nav-main {
@@ -15,7 +15,7 @@
 				> li {
 					display: inline-block;
 					float: none;
-					text-align: left;
+					text-align: $left;
 				}
 			}
 		}
@@ -24,7 +24,7 @@
 
 @media (max-width: 991px) {
 	#header.center {
-		text-align: left;
+		text-align: $left;
 		nav {
 			float: none;
 		}
@@ -38,13 +38,13 @@
 			margin-top: -60px;
 		}
 		.logo {
-			text-align: left;
+			text-align: $left;
 			img {
 				margin-top: 42px;
 			}
 		}
 		nav {
-			float: right;
+			float: $right;
 			margin-top: 18px;
 			width: auto;
 			ul.nav-main > li {

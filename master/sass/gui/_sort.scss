@@ -33,7 +33,7 @@
 		position: relative;
 		.isotope-item {
 			width: 20%;
-			float: left;
+			float: $left;
 			&.w2 {
 				width: 40%;
 			}
@@ -44,7 +44,7 @@
 			}
 			.img-thumbnail, a, .thumb-info img {
 				border-radius: 0;
-				float: left;
+				float: $left;
 			}
 		}
 	}
@@ -90,8 +90,8 @@
 	}
 
 	.sort-destination, .isotope-item {
-		margin-left: auto !important;
-		margin-right: auto !important;
+		margin-#{$left}: auto !important;
+		margin-#{$right}: auto !important;
 	}
 
 	.sort-destination.full-width {
@@ -107,8 +107,8 @@
 		position: static !important;
 		text-align: center;
 		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		margin-#{$left}: auto;
+		margin-#{$right}: auto;
 		-moz-transform: none !important;
 		-ms-transform: none !important;
 		-o-transform: none !important;
@@ -124,8 +124,8 @@
 @media (max-width: 479px) {
 
 	.sort-destination, .isotope-item {
-		margin-left: auto !important;
-		margin-right: auto !important;
+		margin-#{$left}: auto !important;
+		margin-#{$right}: auto !important;
 	}
 
 	.sort-destination.full-width {

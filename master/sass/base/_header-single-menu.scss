@@ -17,7 +17,7 @@
 		}
 		nav ul.nav-main {
 			margin: -28px 0 -9px;
-			float: right;
+			float: $right;
 			li {
 				a, &.dropdown:hover > a {
 					padding-bottom: 20px;
@@ -26,7 +26,7 @@
 			}
 		}
 		nav.mega-menu .mega-menu-signin {
-			margin-right: 0;
+			margin-#{$right}: 0;
 		}
 		&.valign {
 			.social-icons {

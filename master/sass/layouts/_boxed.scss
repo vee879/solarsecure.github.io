@@ -20,7 +20,7 @@ html.boxed {
 	}
 	body.sticky-menu-active {
 		#header {
-			left: 0;
+			#{$left}: 0;
 			top: -65px;
 		}
 	}

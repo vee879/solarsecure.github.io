@@ -53,15 +53,15 @@
 	.footer-ribbon {
 		background: #999;
 		position: absolute;
-		margin: -90px 0 0 14px;
+		margin: side-values(-90px 0 0 14px);
 		padding: 10px 20px 6px 20px;
 		&:before {
-			border-right: 10px solid #646464;
+			border-#{$right}: 10px solid #646464;
 			border-top: 16px solid transparent;
 			content: "";
 			display: block;
 			height: 0;
-			left: -10px;
+			#{$left}: -10px;
 			position: absolute;
 			top: 0;
 			width: 7px;
@@ -129,9 +129,9 @@
 		padding: 0;
 		i {
 			display: block;
-			float: left;
+			float: $left;
 			font-size: 1.2em;
-			margin: 7px 8px 10px 0;
+			margin: side-values(7px 8px 10px 0);
 			position: relative;
 			text-align: center;
 			top: -2px;
@@ -157,20 +157,20 @@
 		margin-top: 40px;
 		padding: 30px 0 10px;
 		nav {
-			float: right;
+			float: $right;
 			ul {
 				list-style: none;
 				margin: 0;
 				padding: 0;
 				li {
-					border-left: 1px solid #505050;
+					border-#{$left}: 1px solid #505050;
 					display: inline-block;
 					line-height: 12px;
 					margin: 0;
 					padding: 0 8px;
 					&:first-child {
 						border: medium none;
-						padding-left: 0;
+						padding-#{$left}: 0;
 					}
 				}
 			}
@@ -190,7 +190,7 @@
 		margin-top: -5px;
 	}
 	.narrow-phone {
-		text-align: right;
+		text-align: $right;
 		margin: -2px 0 0 0;
 		.phone {
 			font-size: 16px;
@@ -200,11 +200,11 @@
 	}
 	.recent-work {
 		li {
-			float: left;
+			float: $left;
 			width: 30%;
-			margin: 10px 3% 0 0;
+			margin: side-values(10px 3% 0 0);
 			.thumb-info {
-				float: left;
+				float: $left;
 				display: inline-block;
 			}
 			&:hover img {
@@ -237,7 +237,7 @@
 		border-top: 1px solid #DDD;
 		.footer-ribbon {
 			margin-top: -76px;
-			margin-left: 14px;
+			margin-#{$left}: 14px;
 		}
 		.footer-copyright {
 			margin-top: 15px;
@@ -272,7 +272,7 @@
 			color: #FFF;
 		}
 		.footer-copyright nav ul li {
-			border-left-color: #FFF;
+			border-#{$left}-color: #FFF;
 		}
 	}
 }

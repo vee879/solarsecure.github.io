@@ -12,7 +12,7 @@
 		position: absolute;
 		top: 35%;
 		width: 80%;
-		left: 10%;
+		#{$left}: 10%;
 		text-align: center;
 	}
 	label {
@@ -23,7 +23,7 @@
 		position: absolute;
 		top: 50%;
 		width: 80%;
-		left: 10%;
+		#{$left}: 10%;
 		text-align: center;
 	}
 }
@@ -54,7 +54,7 @@
 	display: block;
 	position: absolute;
 	top: -28px;
-	right: 5px;
+	#{$right}: 5px;
 	border-radius: 3px;
 	filter: alpha(opacity = 0);
 	opacity: 0;
@@ -65,7 +65,7 @@
 		bottom: -5px;
 		content: "";
 		display: block;
-		left: 13px;
+		#{$left}: 13px;
 		position: absolute;
 		width: 0;
 	}

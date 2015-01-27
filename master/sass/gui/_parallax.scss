@@ -19,7 +19,7 @@
 		i.fa-quote-left {
 			font-size: 34px;
 			position: relative;
-			left: -5px;
+			#{$left}: -5px;
 		}
 		p {
 			font-size: 24px;
@@ -30,7 +30,7 @@
 			line-height: 20px;
 			color: #999;
 			position: relative;
-			left: -5px;
+			#{$left}: -5px;
 		}
 	}
 }

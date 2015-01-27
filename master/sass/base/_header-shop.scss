@@ -1,9 +1,9 @@
 /* Shop - Mega Menu (Cart) */
 #header {
 	nav.mega-menu .mega-menu-shop {
-		margin-right: -20px;
-		padding-left: 0;
-		margin-left: 0;
+		margin-#{$right}: -20px;
+		padding-#{$left}: 0;
+		margin-#{$left}: 0;
 		a {
 			color: #444;
 		}
@@ -13,8 +13,8 @@
 		}
 		.dropdown-menu {
 			width: 40%;
-			right: 8px;
-			border-radius: 6px 0 6px 6px;
+			#{$right}: 8px;
+			border-radius: corner-values(6px 0 6px 6px);
 			li {
 				table tr td a {
 					background-color: transparent !important;
@@ -22,6 +22,9 @@
 					padding: 0;
 					margin: 0;
 					display: block;
+					&.remove {
+						float: $right;
+					}
 					&:hover {
 						text-decoration: none;
 					}
@@ -29,13 +32,13 @@
 			}
 		}
 		.fa-shopping-cart {
-			margin-right: 5px;
+			margin-#{$right}: 5px;
 		}
 		.product-thumbnail {
 			width: 120px;
 		}
 		.product-actions {
-			text-align: right;
+			text-align: $right;
 			width: 80px;
 		}
 		.actions-continue {

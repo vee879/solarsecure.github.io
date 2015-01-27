@@ -1,7 +1,10 @@
 /* Thumbnails */
 .img-thumbnail {
-	border-radius: 8px;
+	border-radius: 6px;
 	position: relative;
+	img {
+		border-radius: 4px;
+	}
 	.zoom {
 		background: #CCC;
 		border-radius: 100%;
@@ -11,12 +14,12 @@
 		height: 30px;
 		padding: 6px;
 		position: absolute;
-		right: 8px;
+		#{$right}: 8px;
 		text-align: center;
 		width: 30px;
 		i {
 			font-size: 14px;
-			left: -1px;
+			#{$left}: -1px;
 			position: relative;
 			top: -3px;
 		}
@@ -30,7 +33,7 @@ ul.thumbnail-gallery {
 	padding: 0;
 	li {
 		display: inline-block;
-		margin: 10px 10px 0 0;
+		margin: side-values(10px 10px 0 0);
 		padding: 0;
 	}
 }

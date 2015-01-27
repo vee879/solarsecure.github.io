@@ -1,3 +1,7 @@
+html {
+	direction: $dir;
+}
+
 body {
 	background-color: $light-bg;
 	color: $color-default;

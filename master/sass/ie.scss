@@ -46,7 +46,7 @@ html.ie8 div.testimonial-author div.img-thumbnail {
 }
 
 html.ie8 div.testimonial-author div.img-thumbnail img {
-	float: left;
+	float: $left;
 }
 
 /* Pricing Plans */
@@ -55,8 +55,8 @@ html.ie8 div.plan-ribbon-wrapper {
 }
 
 html.ie8 div.plan-ribbon-wrapper div.plan-ribbon {
-	text-align: left;
-	padding-left: 20px;
+	text-align: $left;
+	padding-#{$left}: 20px;
 }
 
 /* Parallax */

@@ -12,7 +12,7 @@
 	overflow: hidden;
 	padding: 20px 0 10px 0;
 	position: relative;
-	text-align: left;
+	text-align: $left;
 	p {
 		color: #FFF;
 		display: inline-block;
@@ -35,14 +35,14 @@
 		margin-top: 15px;
 		margin-bottom: 15px;
 		position: relative;
-		text-align: right;
+		text-align: $right;
 		.btn {
 			position: relative;
 			z-index: 1;
 			i {
 				font-size: 1.1em;
 				font-weight: normal;
-				margin-left: 5px;
+				margin-#{$left}: 5px;
 			}
 		}
 		a {
@@ -53,7 +53,7 @@
 		}
 	}
 	.learn-more {
-		margin-left: 15px;
+		margin-#{$left}: 15px;
 	}
 	&.light {
 		background-color: #E2E2E2;
@@ -68,13 +68,13 @@
 
 /* Home Intro Compact */
 .home-intro-compact {
-	border-radius: 0 0 10px 10px;
+	border-radius: corner-values(0 0 10px 10px);
 	margin-top: -10px;
 	p {
-		padding-left: 20px;
+		padding-#{$left}: 20px;
 	}
 	.get-started {
-		padding-right: 20px;
+		padding-#{$right}: 20px;
 	}
 }
 
@@ -83,10 +83,10 @@
 
 	/* Home Intro */
 	.home-intro-compact {
-		margin-left: 0;
-		margin-right: 0;
-		padding-left: 0;
-		padding-right: 0;
+		margin-#{$left}: 0;
+		margin-#{$right}: 0;
+		padding-#{$left}: 0;
+		padding-#{$right}: 0;
 	}
 
 }
@@ -128,7 +128,7 @@
 		background: transparent url(../img/home-concept-item.png) no-repeat 100% 0;
 		width: 350px;
 		height: 420px;
-		margin: 15px 0 0 -30px;
+		margin: side-values(15px 0 0 -30px);
 		padding-bottom: 45px;
 		position: relative;
 		z-index: 1;
@@ -139,7 +139,7 @@
 		height: 56px;
 		display: block;
 		position: absolute;
-		left: 10%;
+		#{$left}: 10%;
 		top: 35px;
 	}
 	.cloud {
@@ -148,7 +148,7 @@
 		height: 56px;
 		display: block;
 		position: absolute;
-		left: 57%;
+		#{$left}: 57%;
 		top: 35px;
 	}
 }
@@ -173,7 +173,7 @@
 	.home-concept {
 		.project-image {
 			background-position: 0 0;
-			margin-left: auto;
+			margin-#{$left}: auto;
 			max-width: 160px;
 			max-height: 220px;
 		}

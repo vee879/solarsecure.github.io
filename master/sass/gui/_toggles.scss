@@ -17,13 +17,13 @@
 		label {
 			@include transition (all .15s ease-out);
 			background: #F4F4F4;
-			border-left: 3px solid #CCC;
+			border-#{$left}: 3px solid #CCC;
 			border-radius: 5px;
 			color: #CCC;
 			display: block;
 			font-size: 1.1em;
 			min-height: 20px;
-			padding: 12px 20px 12px 10px;
+			padding: side-values(12px 20px 12px 10px);
 			position: relative;
 			cursor: pointer;
 			font-weight: 400;
@@ -43,11 +43,11 @@
 			}
 			&:before {
 				border: 6px solid transparent;
-				border-left-color: inherit;
+				border-#{$left}-color: inherit;
 				content: '';
 				margin-top: -6px;
 				position: absolute;
-				right: 4px;
+				#{$right}: 4px;
 				top: 50%;
 			}
 			&:hover {
@@ -57,14 +57,14 @@
 				color: #999;
 				display: block;
 				overflow: hidden;
-				padding-left: 30px;
+				padding-#{$left}: 30px;
 				text-overflow: ellipsis;
 				white-space: nowrap;
 				height: 25px;
 			}
 			i {
 				font-size: 0.7em;
-				margin-right: 8px;
+				margin-#{$right}: 8px;
 				position: relative;
 				top: -1px;
 			}
@@ -93,7 +93,7 @@
 				border: 6px solid transparent;
 				border-top-color: #FFF;
 				margin-top: -3px;
-				right: 10px;
+				#{$right}: 10px;
 			}
 		}
 		> p {

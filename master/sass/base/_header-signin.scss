@@ -1,18 +1,18 @@
 /* Mega Menu (Signin/SignUp) */
 #header nav.mega-menu ul.nav-main .mega-menu-signin {
-	margin-right: -20px;
-	padding-left: 0;
-	margin-left: 0;
+	padding-#{$left}: 0;
+	margin-#{$left}: 0;
+	margin-#{$right}: -20px;
 	a {
 		color: #444;
 	}
 	.dropdown-menu {
 		width: 40%;
-		right: 8px;
-		border-radius: 6px 0 6px 6px;
+		#{$right}: 8px;
+		border-radius: corner-values(6px 0 6px 6px);
 	}
 	.fa-user {
-		margin-right: 5px;
+		margin-#{$right}: 5px;
 	}
 	.mega-menu-sub-title {
 		margin-bottom: 10px;
@@ -61,8 +61,8 @@
 				img {
 					max-width: 55px;
 				}
-				float: left;
-				margin-right: 15px;
+				float: $left;
+				margin-#{$right}: 15px;
 			}
 			strong {
 				color: #111;
@@ -76,8 +76,8 @@
 			}
 			p {
 				color: #999;
-				margin: 0 0 0 25px;
-				text-align: left;
+				margin: side-values(0 0 0 25px);
+				text-align: $left;
 			}
 		}
 		.list-account-options {
@@ -103,7 +103,7 @@ body #header nav.mega-menu .mega-menu-signin ul.dropdown-menu {
 @media (max-width: 991px) {
 
 	#header nav.mega-menu ul.nav-main .mega-menu-signin {
-		margin-right: 0;
+		margin-#{$right}: 0;
 		a {
 			color: #FFF;
 			.fa-angle-down {
@@ -112,10 +112,10 @@ body #header nav.mega-menu .mega-menu-signin ul.dropdown-menu {
 		}
 		ul.dropdown-menu {
 			display: block !important;
-			margin: 25px 0 0 0 !important;
-			padding: 0 0 0 8px;
+			margin: side-values(25px 0 0 0) !important;
+			padding: side-values(0 0 0 8px);
 			width: 100%;
-			right: 0;
+			#{$right}: 0;
 			li a {
 				color: #FFF;
 				padding: 6px 0 !important;

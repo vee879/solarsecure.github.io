@@ -44,7 +44,7 @@
 							a {
 								color: $color-default;
 								text-shadow: none;
-								margin: 0 0 0 -8px;
+								margin: side-values(0 0 0 -8px);
 								padding: 3px 8px;
 								text-transform: none;
 								font-size: 0.9em;
@@ -68,7 +68,7 @@
 				position: relative;
 			}
 			.dropdown-menu {
-				left: auto;
+				#{$left}: auto;
 				> li {
 					display: block;
 				}
@@ -94,11 +94,11 @@
 			}
 			.dropdown.mega-menu-fullwidth .dropdown-menu {
 				width: 100%;
-				left: 0;
-				right: 0;
+				#{$left}: 0;
+				#{$right}: 0;
 			}
 			nav.pull-right .dropdown-menu {
-				right: 0;
+				#{$right}: 0;
 			}
 		}
 		&.flat-menu nav.mega-menu ul.nav-main li.mega-menu-fullwidth ul.dropdown-menu {

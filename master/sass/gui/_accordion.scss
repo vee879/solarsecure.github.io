@@ -10,7 +10,7 @@
 				text-decoration: none;
 			}
 			[class^="icon-"] {
-				margin-right: 4px;
+				margin-#{$right}: 4px;
 				position: relative;
 				top: 1px;
 			}

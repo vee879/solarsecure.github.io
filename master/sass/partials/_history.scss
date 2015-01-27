@@ -12,15 +12,18 @@ ul.history {
 			padding: 0;
 		}
 		p {
-			margin-left: 53px;
+			margin-#{$left}: 53px;
 		}
 		.thumb {
 			background: transparent url(../img/history-thumb.png) no-repeat 0 0;
+			@include if-rtl {
+				background-position: 0 -200px;
+			}
 			width: 227px;
 			height: 160px;
 			margin: 0 0 30px;
 			padding: 0;
-			float: left;
+			float: $left;
 			img {
 				border-radius: 150px;
 				margin: 7px 8px;
@@ -29,8 +32,8 @@ ul.history {
 			}
 		}
 		.featured-box {
-			text-align: left;
-			margin-left: 225px;
+			text-align: $left;
+			margin-#{$left}: 225px;
 			margin-bottom: 50px;
 			min-height: 115px;
 			.box-content {
@@ -48,7 +51,7 @@ ul.history {
 			display: none;
 		}
 		.featured-box {
-			margin-left: 0;
+			margin-#{$left}: 0;
 		}
 	}
 

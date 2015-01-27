@@ -7,7 +7,7 @@
 	max-width: 100%;
 	&:hover {
 		.thumb-info-action-icon {
-			right: 0;
+			#{$right}: 0;
 			top: 0;
 		}
 		.thumb-info-action {
@@ -21,19 +21,19 @@
 	.thumb-info-action-icon {
 		@include transition (all 0.3s);
 		background: #CCC;
-		border-radius: 0 0 0 25px;
+		border-radius: corner-values(0 0 0 25px);
 		display: inline-block;
 		font-size: 25px;
 		height: 50px;
 		line-height: 50px;
 		position: absolute;
-		right: -100px;
+		#{$right}: -100px;
 		text-align: center;
 		top: -100px;
 		width: 50px;
 		i {
 			font-size: 24px;
-			left: 3px;
+			#{$left}: 3px;
 			position: relative;
 			top: -4px;
 		}
@@ -45,10 +45,10 @@
 		color: #FFF;
 		filter: alpha(opacity = 0);
 		height: 100%;
-		left: 0;
+		#{$left}: 0;
 		opacity: 0.0;
 		position: absolute;
-		right: 0;
+		#{$right}: 0;
 		top: 0;
 		width: 100%;
 	}
@@ -64,7 +64,7 @@
 		color: #FFF;
 		font-size: 18px;
 		font-weight: 700;
-		left: 0;
+		#{$left}: 0;
 		letter-spacing: -1px;
 		padding: 9px 11px 9px;
 		position: absolute;
@@ -76,7 +76,7 @@
 		background-color: #CCC;
 		border-radius: 2px;
 		display: inline-block;
-		float: left;
+		float: $left;
 		font-size: 12px;
 		font-weight: 400;
 		letter-spacing: 0;
@@ -138,8 +138,8 @@
 	.thumb-info-title {
 		background: transparent;
 		bottom: auto;
-		left: 0;
-		right: 0;
+		#{$left}: 0;
+		#{$right}: 0;
 		top: 35%;
 		text-align: center;
 		opacity: 0;

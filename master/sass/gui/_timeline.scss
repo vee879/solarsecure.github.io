@@ -3,7 +3,7 @@ section.timeline {
 	width: 75%;
 	margin: 50px 13% 0;
 	position: relative;
-	float: left;
+	float: $left;
 	padding-bottom: 120px;
 	&:after {
 		background: rgb(80,80,80);
@@ -16,8 +16,8 @@ section.timeline {
 		content: "";
 		display: block;
 		height: 100%;
-		left: 50%;
-		margin-left: -2px;
+		#{$left}: 50%;
+		margin-#{$left}: -2px;
 		position: absolute;
 		top: -60px;
 		width: 3px;
@@ -76,7 +76,7 @@ section.timeline {
 		padding: 10px;
 		position: relative;
 		width: 45.7%;
-		float: left;
+		float: $left;
 		z-index: 1;
 		margin-bottom: 30px;
 		background: #FFF;
@@ -89,31 +89,36 @@ section.timeline {
 				content: "";
 				display: block;
 				height: 7px;
-				margin-right: -5px;
+				margin-#{$right}: -5px;
 				position: absolute;
-				right: -6.8%;
+				#{$right}: -6.8%;
 				top: 22px;
 				width: 8px;
 			}
 			&:after {
-				@include transform(rotate(45deg));
+				@include if-ltr {
+					@include transform(rotate(45deg));
+				}
+				@include if-rtl {
+					@include transform(rotate(-45deg));
+				}
 				background: #FFF;
-				border-right: 1px solid #E5E5E5;
+				border-#{$right}: 1px solid #E5E5E5;
 				border-top: 1px solid #E5E5E5;
 				content: "";
 				display: block;
 				height: 14px;
 				position: absolute;
-				right: -8px;
+				#{$right}: -8px;
 				top: 20px;
 				width: 14px;
 				z-index: 0;
 			}
 		}
 		&.right {
-			clear: right;
-			float: right;
-			right: -1px;
+			clear: $right;
+			float: $right;
+			#{$right}: -1px;
 			margin-top: 40px;
 			&:before {
 				background: none repeat scroll 0 0 #E5E5E5;
@@ -122,22 +127,27 @@ section.timeline {
 				content: "";
 				display: block;
 				height: 7px;
-				margin-left: -5px;
+				margin-#{$left}: -5px;
 				position: absolute;
-				left: -7.2%;
+				#{$left}: -7.2%;
 				top: 32px;
 				width: 8px;
 			}
 			&:after {
-				@include transform(rotate(45deg));
+				@include if-ltr {
+					@include transform(rotate(45deg));
+				}
+				@include if-rtl {
+					@include transform(rotate(-45deg));
+				}
 				background: #FFF;
-				border-left: 1px solid #E5E5E5;
+				border-#{$left}: 1px solid #E5E5E5;
 				border-bottom: 1px solid #E5E5E5;
 				content: "";
 				display: block;
 				height: 14px;
 				position: absolute;
-				left: -8px;
+				#{$left}: -8px;
 				top: 30px;
 				width: 14px;
 				z-index: 0;
@@ -154,7 +164,7 @@ section.timeline {
 			}
 		}
 		.thumb-info {
-			float: left;
+			float: $left;
 			margin-bottom: -5px;
 		}
 		.owl-carousel {
@@ -172,16 +182,16 @@ section.timeline {
 	section.timeline .timeline-box {
 		float: none;
 		clear: both;
-		right: auto;
-		left: auto;
+		#{$right}: auto;
+		#{$left}: auto;
 		margin: 25px auto;
 		max-width: 70%;
 		width: auto;
 		&.right {
 			float: none;
 			clear: both;
-			right: auto;
-			left: auto;
+			#{$right}: auto;
+			#{$left}: auto;
 			margin: 25px auto;
 			max-width: 70%;
 			width: auto;
@@ -198,8 +208,8 @@ section.timeline {
 	section.timeline {
 		width: auto;
 		float: none;
-		margin-left: 0;
-		margin-right: 0;
+		margin-#{$left}: 0;
+		margin-#{$right}: 0;
 		.timeline-box {
 			margin: 15px auto;
 			max-width: 90%;
@@ -212,9 +222,9 @@ section.timeline {
 
 	article.post-large {
 		.post-image, .post-date {
-			margin-left: 0;
+			margin-#{$left}: 0;
 		}
-		margin-left: 0;
+		margin-#{$left}: 0;
 	}
 
 }

@@ -1,11 +1,15 @@
 /* Tabs */
 .tabs {
-    border-radius: 4px;
+    border-radius: corner-values(4px);
     margin-bottom: 35px;
 }
 
 .nav-tabs {
 	margin: 0;
+	padding: 0;
+	@include if-rtl {
+		padding-right: 2px;
+	}
 	font-size: 0;
 	border-bottom-color: #EEE;
 
@@ -15,22 +19,22 @@
 
 		&:last-child {
 			a {
-				margin-right: 0;
+				margin-#{$right}: 0;
 			}
 		}
 
 		a {
-			border-radius: 5px 5px 0 0;
+			border-radius: corner-values(5px 5px 0 0);
 			font-size: 14px;
-			margin-right: 1px;
+			margin-#{$right}: 1px;
 
 			&,
 			&:hover {
 				background: #F4F4F4;
 				border: {
 					bottom: none;
-					left: 1px solid #EEE;
-					right: 1px solid #EEE;
+					#{$left}: 1px solid #EEE;
+					#{$right}: 1px solid #EEE;
 					top: 3px solid #EEE;
 				}
 				color: #CCC;
@@ -53,8 +57,8 @@
 			a:hover,
 			a:focus {
 				background: #FFF;
-				border-left-color: #EEE;
-				border-right-color: #EEE;
+				border-#{$left}-color: #EEE;
+				border-#{$right}-color: #EEE;
 				border-top: 3px solid #CCC;
 				color: #CCC;
 			}
@@ -63,7 +67,7 @@
 }
 
 .tab-content {
-	border-radius: 0 0 4px 4px;
+	border-radius: corner-values(0 0 4px 4px);
 	box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.04);
 	background-color: #FFF;
 	border: 1px solid #EEE;
@@ -73,14 +77,15 @@
 
 /* Right Aligned */
 .nav-tabs.nav-right {
-	text-align: right;
+	text-align: $right;
 }
 
 /* Bottom Tabs */
 .tabs.tabs-bottom {
-
+	margin: 0;
+	padding: 0;
 	.tab-content {
-		border-radius: 4px 4px 0 0;
+		border-radius: corner-values(4px 4px 0 0);
 		border-bottom: 0;
 		border-top: 1px solid #EEE;
 	}
@@ -95,14 +100,14 @@
 
 			&:last-child {
 				a {
-					margin-right: 0;
+					margin-#{$right}: 0;
 				}
 			}
 
 			a {
-				border-radius: 0 0 5px 5px;
+				border-radius: corner-values(0 0 5px 5px);
 				font-size: 14px;
-				margin-right: 1px;
+				margin-#{$right}: 1px;
 
 				&,
 				&:hover {
@@ -134,6 +139,7 @@
 .tabs-vertical {
 	display: table;
 	width: 100%;
+	padding: 0;
 	border-top: 1px solid #EEE;
 
 	.tab-content {
@@ -153,7 +159,7 @@
 			display: block;
 
 			a {
-				border-radius: 0;
+				border-radius: corner-values(0);
 				display:block;
 				padding-top: 10px;
 
@@ -178,38 +184,39 @@
 
 /* Vertical - Left Side */
 .tabs-left {
+	padding: 0;
 	.tab-content {
-		border-radius: 0 5px 5px 5px;
-		border-left: none;
+		border-radius: corner-values(0 5px 5px 5px);
+		border-#{$left}: none;
 	}
 
 	.nav-tabs {
 		& > li {
-			margin-right: -1px;
+			margin-#{$right}: -1px;
 
 			&:first-child {
 				a {
-					border-radius: 5px 0 0 0;
+					border-radius: corner-values(5px 0 0 0);
 				}
 			}
 
 			&:last-child {
 				a {
-					border-radius: 0 0 0 5px;
+					border-radius: corner-values(0 0 0 5px);
 					border-bottom: 1px solid #eee;
 				}
 			}
 
 			a {
 				border: {
-					right: 1px solid #EEE;
-					left: 3px solid #EEE;
+					#{$right}: 1px solid #EEE;
+					#{$left}: 3px solid #EEE;
 				}
-				margin-right: 1px;
-				margin-left: -3px;
+				margin-#{$right}: 1px;
+				margin-#{$left}: -3px;
 
 				&:hover {
-					border-left-color: #CCC;
+					border-#{$left}-color: #CCC;
 				}
 			}
 
@@ -217,8 +224,8 @@
 				a,
 				a:hover,
 				a:focus {
-					border-left: 3px solid #CCC;
-					border-right-color: #FFF;
+					border-#{$left}: 3px solid #CCC;
+					border-#{$right}-color: #FFF;
 				}
 			}
 		}
@@ -227,39 +234,39 @@
 
 /* Vertical - Right Side */
 .tabs-right {
-
+	padding: 0;
 	.tab-content {
-		border-radius: 5px 0 5px 5px;
-		border-right: none;
+		border-radius: corner-values(5px 0 5px 5px);
+		border-#{$right}: none;
 	}
 
 	.nav-tabs {
 		& > li {
-			margin-left: -1px;
+			margin-#{$left}: -1px;
 
 			&:first-child {
 				a {
-					border-radius: 0 5px 0 0;
+					border-radius: corner-values(0 5px 0 0);
 				}
 			}
 
 			&:last-child {
 				a {
-					border-radius: 0 0 5px 0;
+					border-radius: corner-values(0 0 5px 0);
 					border-bottom: 1px solid #eee;
 				}
 			}
 
 			a {
 				border: {
-					right: 3px solid #EEE;
-					left: 1px solid #EEE;
+					#{$right}: 3px solid #EEE;
+					#{$left}: 1px solid #EEE;
 				}
-				margin-right: 1px;
-				margin-left: 1px;
+				margin-#{$right}: 1px;
+				margin-#{$left}: 1px;
 
 				&:hover {
-					border-right-color: #CCC;
+					border-#{$right}-color: #CCC;
 				}
 			}
 
@@ -267,8 +274,8 @@
 				a,
 				a:hover,
 				a:focus {
-					border-right: 3px solid #CCC;
-					border-left: 1px solid #FFF;
+					border-#{$right}: 3px solid #CCC;
+					border-#{$left}: 1px solid #FFF;
 				}
 			}
 		}
@@ -277,6 +284,7 @@
 
 /* Justified */
 .nav-tabs.nav-justified {
+	padding: 0;
 	margin-bottom: -1px;
 
 	li {
@@ -285,21 +293,21 @@
 		&:first-child {
 			a,
 			a:hover {
-				border-radius: 5px 0 0 0;
+				border-radius: corner-values(5px 0 0 0);
 			}
 		}
 
 		&:last-child {
 			a,
 			a:hover {
-				border-radius: 0 5px 0 0;
+				border-radius: corner-values(0 5px 0 0);
 			}
 		}
 
 		a {
 			border-bottom: 1px solid #DDD;
-			border-radius: 0;
-			margin-right: 0;
+			border-radius: corner-values(0);
+			margin-#{$right}: 0;
 
 
 			&:hover,
@@ -313,8 +321,8 @@
 			a:hover,
 			a:focus {
 				background: #FFF;
-				border-left-color: #EEE;
-				border-right-color: #EEE;
+				border-#{$left}-color: #EEE;
+				border-#{$right}-color: #EEE;
 				border-top-width: 3px;
 			}
 		}
@@ -338,24 +346,25 @@
 
 /* Bottom Tabs with Justified Nav */
 .tabs.tabs-bottom {
+	padding: 0;
 	.nav.nav-tabs.nav-justified {
 		border-top: none;
 		li {
 			a {
-				margin-right: 0;
+				margin-#{$right}: 0;
 				border-top-color: transparent;
 			}
 
 			&:first-child {
 				a {
-					border-radius: 0 0 0 5px;
+					border-radius: corner-values(0 0 0 5px);
 				}
 			}
 
 			&:last-child {
 				a {
-					margin-right: 0;
-					border-radius: 0 0 5px 0;
+					margin-#{$right}: 0;
+					border-radius: corner-values(0 0 5px 0);
 				}
 			}
 
@@ -384,11 +393,11 @@
 				}
 				&:first-child a,
 				&:first-child a:hover {
-					border-radius: 5px 5px 0 0;
+					border-radius: corner-values(5px 5px 0 0);
 				}
 				&:last-child a,
 				&:last-child a:hover {
-					border-radius: 0;
+					border-radius: corner-values(0);
 				}
 				&.active {
 					a {
@@ -408,11 +417,11 @@
 					}
 					&:first-child a,
 					&:first-child a:hover {
-						border-radius: 0;						
+						border-radius: corner-values(0);
 					}
 					&:last-child a,
 					&:last-child a:hover {
-						border-radius: 0 0 5px 5px;
+						border-radius: corner-values(0 0 5px 5px);
 					}
 				}
 			}

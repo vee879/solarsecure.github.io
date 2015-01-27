@@ -102,7 +102,8 @@ body.dark .pagination {
 // Buttons
 .btn-primary,
 .pagination > .active > a,
-body.dark .pagination > .active > a {
+body.dark .pagination > .active > a,
+.owl-theme .owl-controls .owl-nav [class*="owl-"] {
 	border-color: @skinColor !important;
 	.buttonBackground(@skinColor, spin(@skinColor, 20%));
 }
@@ -145,6 +146,7 @@ section.toggle {
 	label {
 		color: @skinColor;
 		border-left-color: @skinColor;
+		border-right-color: @skinColor;
 	}
 	&.active > label {
 		background-color: @skinColor;
@@ -192,6 +194,12 @@ section.page-top.custom-product {
 // Inverted
 .inverted {
 	background-color: @skinColor;
+}
+
+// Carousel
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: darken(@skinColor, 6%);
 }
 
 // Tabs
@@ -466,6 +474,7 @@ ul.history li .featured-box .box-content {
 
 	.footer-ribbon:before {
 		border-right-color: darken(@skinColor, 15%);
+		border-left-color: darken(@skinColor, 15%);
 	}
 
 	&.light {
@@ -498,4 +507,32 @@ ul.history li .featured-box .box-content {
 // Boxed
 html.boxed .body {
 	border-top-color: @skinColor;
+}
+
+// RTL
+html[dir="rtl"] {
+	.tabs {
+		&.tabs-vertical.tabs-left {
+			ul.nav-tabs {
+				li a:hover,
+				li.active a,
+				li.active a:hover,
+				li.active a:focus {
+					border-right-color: @skinColor;
+					border-left-color: transparent;
+				}
+			}
+		}
+		&.tabs-vertical.tabs-right {
+			ul.nav-tabs {
+				li a:hover,
+				li.active a,
+				li.active a:hover,
+				li.active a:focus {
+					border-right-color: transparent;
+					border-left-color: @skinColor;
+				}
+			}
+		}
+	}
 }

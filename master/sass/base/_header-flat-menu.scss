@@ -23,7 +23,7 @@
 			}
 		}
 		nav ul.nav-main {
-			float: right;
+			float: $right;
 			margin: -9px 0 -8px;
 			> li > a {
 				background: transparent;
@@ -33,8 +33,8 @@
 			li {
 				a {
 					border-radius: 0;
-					margin-left: 1px;
-					margin-right: 3px;
+					margin-#{$left}: 1px;
+					margin-#{$right}: 3px;
 					padding-bottom: 20px;
 					padding-top: 46px;
 				}
@@ -48,7 +48,7 @@
 				}
 			}
 			ul.dropdown-menu {
-				margin: 0 0 0 1px;
+				margin: side-values(0 0 0 1px);
 				border-radius: 0;
 				ul.dropdown-menu {
 					border-radius: 0;
@@ -101,7 +101,7 @@
 				}
 			}
 			.header-top {
-				border-radius: 5px 5px 0 0;
+				border-radius: corner-values(5px 5px 0 0);
 			}
 		}
 		&.boxed body.sticky-menu-active #header.flat-menu.clean-top,

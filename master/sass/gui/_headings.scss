@@ -62,6 +62,11 @@ h1 {
 		font-size: 4.2em;
 		line-height: 54px;
 	}
+	&.small {
+		font-size: 2.2em;
+		line-height: 42px;
+		font-weight: 600;
+	}
 	&.short {
 		margin-bottom: 15px;
 	}

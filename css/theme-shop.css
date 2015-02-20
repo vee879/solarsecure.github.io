@@ -1,7 +1,7 @@
 /*
 Name: 			theme-shop.css
 Written by: 	Okler Themes - (http://www.okler.net)
-Version: 		3.5.1
+Version: 		3.7.0
 */
 /* Custom Font - Stars (From WooCommerce) */
 @font-face {
@@ -39,6 +39,10 @@ Version: 		3.5.1
 	padding: 0;
 	margin: 0;
 	display: block;
+}
+
+#header nav.mega-menu .mega-menu-shop .dropdown-menu li table tr td a.remove {
+	float: right;
 }
 
 #header nav.mega-menu .mega-menu-shop .dropdown-menu li table tr td a:hover {

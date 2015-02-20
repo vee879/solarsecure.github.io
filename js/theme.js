@@ -1,7 +1,7 @@
 /*
 Name: 			Theme Base
 Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	3.5.1
+Theme Version:	3.7.0
 */
 
 // Theme
@@ -125,11 +125,24 @@ window.theme = {};
 	};
 
 	PluginCarousel.defaults = {
-		itemsDesktop: [1199, 4],
-		itemsDesktopSmall: [979, 3],
-		itemsTablet: [768, 2],
-		itemsTabletSmall: false,
-		itemsMobile: [479, 1]
+		loop: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			479: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			979: {
+				items: 3
+			},
+			1199: {
+				items: 4
+			}
+		}
 	};
 
 	PluginCarousel.prototype = {
@@ -167,16 +180,36 @@ window.theme = {};
 				return this;
 			}
 
-			// Force to Show 1 item if Items Settings is set to 1
-			if (this.options.items === 1) {
+			var self = this,
+				$el = this.options.wrapper,
+				activeItemHeight = 0;
+
+			// Force RTL according to HTML dir attribute
+			if ($('html').attr('dir') == 'rtl') {
 				this.options = $.extend(true, {}, this.options, {
-					itemsDesktop: false,
-					itemsDesktopSmall: false,
-					itemsTablet: false,
-					itemsTabletSmall: false,
-					itemsMobile: false
+					rtl: true
 				});
 			}
+
+			if (this.options.items == 1) {
+				this.options.responsive = {}
+			}
+
+			if (this.options.items > 4) {
+				this.options = $.extend(true, {}, this.options, {
+					responsive: {
+						1199: {
+							items: this.options.items
+						}
+					}
+				});
+			}
+
+			// Auto Height
+			$(window).afterResize(function() {
+				activeItemHeight = $el.find('.owl-item.active').height();
+				$el.find('.owl-stage-outer').height(activeItemHeight);
+			});
 
 			this.options.wrapper.owlCarousel(this.options).addClass("owl-carousel-init");
 
@@ -1319,8 +1352,7 @@ window.theme = {};
 
 	PluginToggle.defaults = {
 		duration: 350,
-		isAccordion: false,
-		addIcons: true
+		isAccordion: false
 	};
 
 	PluginToggle.prototype = {
@@ -1361,13 +1393,6 @@ window.theme = {};
 
 			$items.each(function() {
 				$el = $(this);
-
-				if (self.options.addIcons) {
-					$el.find('> label').prepend(
-						$('<i />').addClass('fa fa-plus'),
-						$('<i />').addClass('fa fa-minus')
-					);
-				}
 
 				if ($el.hasClass('active')) {
 					$el.find('> p').addClass('preview-active');
@@ -1597,7 +1622,8 @@ window.theme = {};
 						}
 					}
 				},
-				validateCaptchaURL: 'php/contact-form-verify-captcha.php'
+				validateCaptchaURL: 'php/contact-form-verify-captcha.php',
+				refreshCaptchaURL: 'php/contact-form-refresh-captcha.php'
 			},
 
 			initialize: function(opts) {
@@ -1657,6 +1683,14 @@ window.theme = {};
 					}
 
 				}, '');
+
+				// Refresh Captcha
+				$('#refreshCaptcha').on('click', function(e) {
+					e.preventDefault();
+					$.get(self.options.refreshCaptchaURL, function(url) {
+						$('#captcha-image').attr('src', url);
+					});					
+				});
 
 			},
 
@@ -2362,7 +2396,7 @@ window.theme = {};
 
 			build: function() {
 				if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
-					return false;
+					return this;
 				}
 
 				var self = this,
@@ -2506,7 +2540,7 @@ window.theme = {};
 					$body.addClass('sticky-menu-active always-sticky').removeClass('sticky-menu-deactive');
 
 					if (self.options.stickyBodyPadding) {
-						$body.css('padding-top', headerHeight + 20);
+						$body.css('padding-top', headerHeight);
 					}
 
 				}
@@ -2517,11 +2551,17 @@ window.theme = {};
 			events: function() {
 				var self = this;
 
+				if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
+					return this;
+				}
+
 				if (!self.options.alwaysStickyEnabled) {
 					$(window).on('scroll resize', function() {
 						self.checkStickyMenu();
 					});
 				}
+
+				return this;
 			}
 
 		}

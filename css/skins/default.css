@@ -90,7 +90,8 @@ body.dark .pagination > .active > span:focus {
 
 .btn-primary,
 .pagination > .active > a,
-body.dark .pagination > .active > a {
+body.dark .pagination > .active > a,
+.owl-theme .owl-controls .owl-nav [class*="owl-"] {
 	border-color: #0088cc !important;
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -100,7 +101,8 @@ body.dark .pagination > .active > a {
 
 .btn-primary:hover,
 .pagination > .active > a:hover,
-body.dark .pagination > .active > a:hover {
+body.dark .pagination > .active > a:hover,
+.owl-theme .owl-controls .owl-nav [class*="owl-"]:hover {
 	border-color: #0099e6;
 	background-color: #0099e6;
 }
@@ -108,9 +110,11 @@ body.dark .pagination > .active > a:hover {
 .btn-primary:active,
 .pagination > .active > a:active,
 body.dark .pagination > .active > a:active,
+.owl-theme .owl-controls .owl-nav [class*="owl-"]:active,
 .btn-primary:focus,
 .pagination > .active > a:focus,
-body.dark .pagination > .active > a:focus {
+body.dark .pagination > .active > a:focus,
+.owl-theme .owl-controls .owl-nav [class*="owl-"]:focus {
 	border-color: #0077b3;
 	background-color: #0077b3;
 }
@@ -221,6 +225,7 @@ section.page-top h1 {
 section.toggle label {
 	color: #0088cc;
 	border-left-color: #0088cc;
+	border-right-color: #0088cc;
 }
 
 section.toggle.active > label {
@@ -264,6 +269,11 @@ section.page-top.custom-product {
 
 .inverted {
 	background-color: #0088cc;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: #0074ad;
 }
 
 .tabs ul.nav-tabs a,
@@ -484,6 +494,7 @@ article.post .post-date .day {
 
 #footer .footer-ribbon:before {
 	border-right-color: #005580;
+	border-left-color: #005580;
 }
 
 #footer.light h1,
@@ -514,4 +525,20 @@ article.post .post-date .day {
 
 html.boxed .body {
 	border-top-color: #0088cc;
+}
+
+html[dir="rtl"] .tabs.tabs-vertical.tabs-left ul.nav-tabs li a:hover,
+html[dir="rtl"] .tabs.tabs-vertical.tabs-left ul.nav-tabs li.active a,
+html[dir="rtl"] .tabs.tabs-vertical.tabs-left ul.nav-tabs li.active a:hover,
+html[dir="rtl"] .tabs.tabs-vertical.tabs-left ul.nav-tabs li.active a:focus {
+	border-right-color: #0088cc;
+	border-left-color: transparent;
+}
+
+html[dir="rtl"] .tabs.tabs-vertical.tabs-right ul.nav-tabs li a:hover,
+html[dir="rtl"] .tabs.tabs-vertical.tabs-right ul.nav-tabs li.active a,
+html[dir="rtl"] .tabs.tabs-vertical.tabs-right ul.nav-tabs li.active a:hover,
+html[dir="rtl"] .tabs.tabs-vertical.tabs-right ul.nav-tabs li.active a:focus {
+	border-right-color: transparent;
+	border-left-color: #0088cc;
 }

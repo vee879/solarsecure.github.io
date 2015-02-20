@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="css/custom.css">
 
 <!-- Head Libs -->
-<script async src="vendor/modernizr/modernizr.js"></script>
+<script src="vendor/modernizr/modernizr.js"></script>
 
 <!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
@@ -81,7 +81,7 @@
       </div>
     </div>
     <div class="container">
-      <h1 class="logo"> <a href="index.html"> <img alt="Company Logo - Solar Secure The Future" width="400" height="90" data-sticky-width="82" data-sticky-height="40" src="img/logo.png"> </a> </h1>
+      <div class="logo"> <a href="index.html"> <img alt="Company Logo - Solar Secure The Future" width="400" height="90" data-sticky-width="82" data-sticky-height="40" src="img/logo.png"> </a> </div>
       <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse"> <i class="fa fa-bars"></i> </button>
     </div>
     <div class="navbar-collapse nav-main-collapse collapse">
@@ -128,7 +128,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="short"><strong>Contact</strong> Us</h2>
-          <form name="WebForm" id="WebForm" action="http://60.240.200.95:85/modules/Webforms/capture.php" method="post" accept-charset="utf-8">
+          <form name="WebForm" id="WebForm" action="http://14.200.115.79:85/modules/Webforms/capture.php" method="post" accept-charset="utf-8">
             <input name="publicid" value="4e75319707768038af2a037130c67906" type="hidden">
             <input name="name" value="WebForm" type="hidden">
             <div class="row">
@@ -168,6 +168,9 @@
                 <div class="col-md-4">
                   <label>Postcode*</label>
                   <input name="code" value="" required data-parsley-type="number" data-parsley-trigger="change" data-parsley-required-message="Please enter your postcode." data-parsley-error-message="Please enter a valid postcode." maxlength="5" class="form-control" id="code">
+                  <select name="leadsource" hidden="">
+                    <option value="Web Site" selected>Web Site</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -187,6 +190,8 @@
           <hr />
           <h4>The <strong>Office</strong></h4>
           <ul class="list-unstyled">
+            <li> <i class="fa fa-map-marker"></i> <strong>Address:</strong> Unit 2A/11 Stoddart Road, Prospect NSW 2148<br>
+              &nbsp;&nbsp;&nbsp;(Near M4 Business Park) </li>
             <li><i class="fa fa-phone"></i> <strong>Phone:</strong><a href="tel:1300885576"> 1300 885 576</a></li>
             <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@solarsecure.com.au">info@solarsecure.com.au</a></li>
           </ul>
@@ -210,6 +215,11 @@
         <div class="contact-details">
           <h4>Contact <strong>Us</strong></h4>
           <ul class="contact">
+            <li>
+              <p><i class="fa fa-map-marker"></i> <strong>Address:</strong> Unit 2A/11 Stoddart Road<br>
+                Prospect NSW 2148<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Near M4 Business Park)</p>
+            </li>
             <li>
               <p><i class="fa fa-phone"></i> <strong>Phone:</strong><a href="tel:1300885576"> 1300 885 576</a></p>
             </li>

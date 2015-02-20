@@ -1,8 +1,12 @@
 /*
 Name: 			theme.css
 Written by: 	Okler Themes - (http://www.okler.net)
-Version: 		3.5.1
+Version: 		3.7.0
 */
+html {
+	direction: ltr;
+}
+
 body {
 	background-color: white;
 	color: #777777;
@@ -196,6 +200,7 @@ body {
 	margin: 1px 0 0 3px;
 	padding: 5px;
 	top: auto;
+	text-align: left;
 }
 
 #header nav ul.nav-main ul.dropdown-menu li:hover > a {
@@ -234,7 +239,7 @@ body {
 	left: 100%;
 	margin-top: -6px;
 	margin-left: -1px;
-	border-radius: 0 6px 6px 6px;
+	border-radius: corder-values(0 6px 6px 6px);
 }
 
 #header nav ul.nav-main .dropdown-submenu > a:after {
@@ -246,7 +251,7 @@ body {
 	border-color: transparent;
 	border-style: solid;
 	border-width: 5px 0 5px 5px;
-	border-left-color: #cccccc;
+	border-left-color: #FFF;
 	margin-top: 5px;
 	margin-right: -10px;
 }
@@ -258,7 +263,7 @@ body {
 #header nav ul.nav-main .dropdown-submenu.pull-left > .dropdown-menu {
 	left: -100%;
 	margin-left: 10px;
-	border-radius: 6px 0 6px 6px;
+	border-radius: corder-values(6px 0 6px 6px);
 }
 
 #header nav ul.nav-main .dropdown-submenu:hover > .dropdown-menu {
@@ -970,9 +975,9 @@ body.sticky-menu-active #header.transparent.semi-transparent.font-color-light na
 }
 /* Mega Menu (Signin/SignUp) */
 #header nav.mega-menu ul.nav-main .mega-menu-signin {
-	margin-right: -20px;
 	padding-left: 0;
 	margin-left: 0;
+	margin-right: -20px;
 }
 
 #header nav.mega-menu ul.nav-main .mega-menu-signin a {
